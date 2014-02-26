@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>mod_cluster-custom-metric</groupId>
     <artifactId>mod_cluster-custom-metric</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <version.jboss-logging>3.1.2.GA</version.jboss-logging>
+        <version.jboss-logging-processor>1.1.0.Final</version.jboss-logging-processor>
+        <version.mod_cluster>1.2.6.Final</version.mod_cluster>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jboss.mod_cluster</groupId>
             <artifactId>mod_cluster-core</artifactId>
-            <version>1.2.6.Final</version>
+            <version>${version.mod_cluster}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>${version.jboss-logging}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging-processor</artifactId>
+            <version>${version.jboss-logging-processor}</version>
         </dependency>
     </dependencies>
 

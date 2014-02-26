@@ -24,8 +24,9 @@ mod_cluster subsystem in, e.g. ha profile or standalone-ha.xml file:
 
 modules/system/layers/base/org/jboss/as/modcluster/main/module.xml:
 
-
     <resources>
         +++
         <resource-root path="mod_cluster-custom-metric-1.0-SNAPSHOT.jar"/>
     </resources>
+
+cp target/mod_cluster-custom-metric-1.0-SNAPSHOT.jar AS7_HOME/modules/system/layers/base/org/jboss/as/modcluster/main/
