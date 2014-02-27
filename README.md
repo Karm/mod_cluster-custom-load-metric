@@ -30,14 +30,14 @@ Plug & Play
     ```
     <resources>
         ...
-        <resource-root path="mod_cluster-custom-metric-1.0-SNAPSHOT.jar"/>
+        <resource-root path="mod_cluster-custom-metric.jar"/>
     </resources>
     ```
 
   1. Copy the jar
   
     ```
-        cp target/mod_cluster-custom-metric-1.0-SNAPSHOT.jar AS7_HOME/modules/system/layers/base/org/jboss/as/modcluster/main/
+        cp target/mod_cluster-custom-metric.jar AS7_HOME/modules/system/layers/base/org/jboss/as/modcluster/main/
     ```
 
 #### Fine tuning
