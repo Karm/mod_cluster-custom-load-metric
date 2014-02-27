@@ -13,7 +13,7 @@ Plug & Play
  1. Install
   1. mod_cluster subsystem in, e.g. ha profile or standalone-ha.xml file:
 
-    ```
+    ```xml
     <subsystem xmlns="urn:jboss:domain:modcluster:1.2">
         <mod-cluster-config advertise-socket="modcluster" connector="ajp">
             <dynamic-load-provider>
@@ -27,7 +27,7 @@ Plug & Play
     ```
   1. modules/system/layers/base/org/jboss/as/modcluster/main/module.xml:
   
-    ```
+    ```xml
     <resources>
         ...
         <resource-root path="mod_cluster-custom-metric.jar"/>
@@ -36,7 +36,7 @@ Plug & Play
 
   1. Copy the jar
   
-    ```
+    ```sh
         cp target/mod_cluster-custom-metric.jar AS7_HOME/modules/system/layers/base/org/jboss/as/modcluster/main/
     ```
 
