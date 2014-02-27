@@ -39,3 +39,16 @@ Plug & Play
     ```
         cp target/mod_cluster-custom-metric-1.0-SNAPSHOT.jar AS7_HOME/modules/system/layers/base/org/jboss/as/modcluster/main/
     ```
+
+#### Fine tuning
+
+One may play with ```capacity```, ```history``` and ```weight``` (in case one uses more metrics). Take a look at [The capacity of a metric](http://docs.jboss.org/mod_cluster/1.2.0/html_single/#java.load) in the documentation.
+
+For instance, with this metric, if you have ```LOAD: 1``` in ```/tmp/myload``` and ```<property name="capacity" value="2" />```, you will get reported Load: 50 on mod_cluster manager console. If you set load in the file to 250 and change capacity to 1000, you will get Load: 75 on mod_cluster manager console. Bigger the number, up to 100, lower the actual load. These are special values:
+
+ * load : load factor from the cluster manager.
+ * load > 0  : a load factor.
+ * load = 0  : standby worker.
+ * load = -1 : errored worker.
+ * load = -2 : just do a cping/cpong.       
+
