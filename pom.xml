@@ -13,6 +13,10 @@
         <version.mod_cluster>1.2.6.Final</version.mod_cluster>
     </properties>
 
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.jboss.mod_cluster</groupId>
