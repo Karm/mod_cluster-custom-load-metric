@@ -18,6 +18,13 @@ public class CustomLoadMetric extends AbstractLoadMetric {
     private String loadfile;
     private Pattern pattern;
 
+    @FunctionalInterface
+    interface Converter<F, T> {
+        T convert(F from);
+    }
+
+    Converter<String, Double> converter = (from) -> Double.parseDouble(from);
+
     @Override
     public double getLoad(Engine engine) throws Exception {
         Scanner scanner = null;
@@ -29,7 +36,7 @@ public class CustomLoadMetric extends AbstractLoadMetric {
                 if (matcher.matches() && matcher.group(1) != null) {
                     // We ain't gonna read the rest of the file once the load has been found.
                     groupOneResult = matcher.group(1);
-                    double load = Double.parseDouble(groupOneResult);
+                    double load = converter.convert(groupOneResult);
                     CustomLoadMetricLogger.LOGGER.loadFound(load, loadfile);
                     return load;
                 }
