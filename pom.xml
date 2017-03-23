@@ -5,12 +5,12 @@
 
     <groupId>mod_cluster-custom-metric</groupId>
     <artifactId>mod_cluster-custom-metric</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <version.jboss-logging>3.1.2.GA</version.jboss-logging>
         <version.jboss-logging-processor>1.1.0.Final</version.jboss-logging-processor>
-        <version.mod_cluster>1.2.6.Final</version.mod_cluster>
+        <version.mod_cluster>1.2.11.Final</version.mod_cluster>
     </properties>
 
     <build>
