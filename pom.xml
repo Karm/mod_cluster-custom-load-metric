@@ -10,8 +10,15 @@
     <properties>
         <version.jboss-logging>3.1.2.GA</version.jboss-logging>
         <version.jboss-logging-processor>1.1.0.Final</version.jboss-logging-processor>
-        <version.mod_cluster>1.2.11.Final</version.mod_cluster>
+        <version.mod_cluster>1.2.13.Final</version.mod_cluster>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>JBoss repository</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 
     <build>
         <finalName>${project.artifactId}</finalName>
